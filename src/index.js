@@ -22,6 +22,7 @@ function inputHandler(e) {
     
     fetchCountries(trimmedSearchValue)
         .then(countries => {
+            console.log(countries)
             if (countries.length === 1) {
                 clearContent();
                 return renderCountryInfo(countries[0])
